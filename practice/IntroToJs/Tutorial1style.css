@@ -1,0 +1,22 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    font-family:sans-serif;
+}
+.card{
+    width:90%;
+    max-width: 500px; 
+    margin: 20px auto;
+}
+img{
+    max-width: 100%;
+     height: auto; 
+     display: block; 
+}
+p{
+   font-size: clamp(1rem, 2.5vw, 1.6rem);
+   margin-top:10px; 
+}

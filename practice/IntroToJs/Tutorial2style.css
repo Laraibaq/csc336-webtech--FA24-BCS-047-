@@ -1,0 +1,44 @@
+*{
+    box-sizing:border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    font-family:sans-serif;
+    padding:1rem;
+}
+button{
+    padding:8px 14px;
+    margin-bottom:10px;
+    cursor:pointer;
+}
+p{
+    margin-bottom:10px;
+}
+.layout{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+aside,main{
+    padding:1rem;
+    background: #ddd;
+}
+@media (min-width: 700px){
+    .layout{
+        flex-direction: row;
+    }
+    aside{
+        width:200px;
+    }
+    main{
+        flex:1;
+    }
+}
+body.dark{
+    background:#111;
+    color:white;
+}
+body.dark aside,body.dark main{
+    background:#333;
+}
