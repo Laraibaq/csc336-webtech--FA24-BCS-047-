@@ -1,0 +1,23 @@
+
+.brand-logo {
+  color: darkred;
+  letter-spacing: 2px;
+}
+
+.cart-link {
+  font-weight: bold;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  transition: box-shadow 0.2s;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-card-price {
+  color: darkred;
+  font-weight: bold;
+}
