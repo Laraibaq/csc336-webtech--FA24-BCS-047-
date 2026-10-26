@@ -41,8 +41,10 @@ p {
 }
 
 img.photo {
+  display: block;
   object-fit: cover;
 }
+
 
 .sidebar h3 {
   font-size: 14px;
@@ -127,4 +129,21 @@ img.photo {
 .content li {
   margin-bottom: 4px;
   line-height: 1.5;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar a {
+  color: white;
+}
+
+.footer {
+  text-align: center;
+  font-size: 11px;
+  color: #888888;
+  padding: 15px;
 }
