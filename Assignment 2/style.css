@@ -129,3 +129,42 @@ a {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+
+.product-detail-image {
+  display: block;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.product-detail-name {
+  font-size: 28px;
+  margin: 0 0 8px;
+}
+
+.product-detail-price {
+  color: darkred;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 0 16px;
+}
+
+.product-detail-description {
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+.quantity-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.quantity-input {
+  width: 100px;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
