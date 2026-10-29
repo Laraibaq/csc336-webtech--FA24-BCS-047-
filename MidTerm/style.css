@@ -168,3 +168,67 @@ a {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+/* ---------- Task 1: Mega menu (BP = 647px, accent hue 329) ---------- */
+.site-nav { position: relative; }
+
+.mega-panel { display: none; }
+.mega-accordion { display: block; }
+
+.mega-list { list-style: none; padding: 0; margin: 0; }
+.mega-list a { display: block; padding: 6px 0; }
+.mega-accordion summary { cursor: pointer; padding: 8px 0; font-weight: bold; }
+.mega-accordion .mega-list { padding-left: 12px; }
+
+@media (min-width: 647px) {
+  /* Keep the menu open as a row from 647px (Bootstrap would wait until 768px) */
+  .navbar-toggler { display: none; }
+  .site-nav > .container { flex-wrap: nowrap; }
+  .site-nav .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+    flex-grow: 1;
+    align-items: center;
+  }
+  .site-nav .navbar-nav { flex-direction: row; }
+
+  .mega-accordion { display: none; }
+
+  .mega-panel {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 2000;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    padding: 24px 40px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+  }
+
+  /* invisible bridge so the panel stays open while the pointer crosses the gap */
+  .mega-panel::before {
+    content: "";
+    position: absolute;
+    top: -16px;
+    left: 0;
+    right: 0;
+    height: 16px;
+  }
+
+  .mega-item:hover .mega-panel,
+  .mega-item:focus-within .mega-panel { display: grid; }
+
+  .mega-heading {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 2px solid hsl(329, 70%, 45%);
+  }
+
+  .mega-list a:hover { color: hsl(329, 70%, 45%); }
+}
