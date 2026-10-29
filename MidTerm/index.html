@@ -138,9 +138,18 @@
 
 
 
-          <a class="nav-link cart-link" href="checkout.html">
-            🛒 Cart (<span id="cart-count">0</span>)
-          </a>
+         <div class="cart-wrap">
+  <a class="nav-link cart-link" href="checkout.html">
+    🛒 Cart <span id="cart-count" class="cart-badge">0</span>
+  </a>
+
+  <div class="mini-cart" id="mini-cart" hidden>
+    <h3 class="mini-cart-title">Your Cart</h3>
+    <ul class="mini-cart-list" id="cart-items"></ul>
+    <p class="mini-cart-total">Total: <strong id="cart-total">Rs. 0</strong></p>
+    <a class="mini-cart-checkout" href="checkout.html">Go to checkout</a>
+  </div>
+</div>
 
         </div>
       </div>
@@ -288,5 +297,10 @@
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
   </script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  </script>
+  <script src="script.js"></script>
+</body>
 </body>
 </html>

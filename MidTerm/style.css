@@ -308,3 +308,57 @@ a {
   .checkout-columns { grid-template-columns: 1fr 1fr; }
   .form-grid { grid-template-columns: 110px 1fr; }
 }
+
+/* ---------- Task 3: cart badge and mini cart ---------- */
+.cart-wrap { position: relative; }
+
+.cart-badge {
+  display: inline-block;
+  min-width: 22px;
+  padding: 0 6px;
+  border-radius: 11px;
+  background-color: #222;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+}
+
+.mini-cart {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 2100;
+  width: 300px;
+  max-width: 90vw;
+  padding: 16px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.mini-cart-title { font-size: 16px; margin: 0 0 10px; }
+.mini-cart-list { list-style: none; padding: 0; margin: 0 0 10px; }
+
+.mini-cart-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.remove-btn {
+  background: none;
+  border: 1px solid #222;
+  border-radius: 4px;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+
+.mini-cart-total { font-size: 15px; margin: 0 0 10px; }
+.mini-cart-checkout { font-weight: bold; text-decoration: underline; }
+
+.add-to-cart-btn:disabled { background-color: #999; cursor: not-allowed; }
