@@ -227,8 +227,84 @@ a {
     letter-spacing: 1.5px;
     padding-bottom: 8px;
     margin-bottom: 8px;
-    border-bottom: 2px solid hsl(329, 70%, 45%);
+    border-bottom: 2px solid #222;
   }
 
-  .mega-list a:hover { color: hsl(329, 70%, 45%); }
+  .mega-list a:hover { color: #000 }
+}
+
+/* ---------- Task 2: Checkout form (BP = 647px) ---------- */
+.checkout-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.checkout-fieldset {
+  min-width: 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 16px 20px 20px;
+}
+
+.checkout-fieldset legend {
+  float: none;
+  width: auto;
+  padding: 0 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #222;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px 12px;
+}
+
+.form-grid label {
+  font-weight: bold;
+  padding-top: 8px;
+}
+
+.field-control input,
+.field-control select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.error-msg {
+  display: none;
+  color: #c00;
+  font-size: 13px;
+  margin: 4px 0 8px;
+}
+
+.field-control input:user-invalid,
+.field-control select:user-invalid {
+  border-color: #c00;
+}
+
+.field-control input:user-invalid + .error-msg,
+.field-control select:user-invalid + .error-msg {
+  display: block;
+}
+
+.checkout-submit {
+  width: 100%;
+  padding: 12px;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media (min-width: 647px) {
+  .checkout-columns { grid-template-columns: 1fr 1fr; }
+  .form-grid { grid-template-columns: 110px 1fr; }
 }
